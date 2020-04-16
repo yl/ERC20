@@ -11,7 +11,9 @@
     "deploy@local": "truffle migrate --reset",
     "deploy@ropsten": "truffle migrate --network ropsten",
     "deploy@mainnet": "truffle migrate --network mainnet",
-    "flattener": "./node_modules/.bin/truffle-flattener ./contracts/StandardToken.sol > ./build/StandardTokenFlattened.sol"
+    "verify@ropsten": "truffle run verify StandardToken --network ropsten",
+    "verify@mainnet": "truffle run verify StandardToken --network mainnet",
+    "merge": "node ./node_modules/.bin/sol-merger ./contracts/StandardToken.sol ./build"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +21,6 @@
     "@openzeppelin/contracts": "^2.5.0",
     "@truffle/hdwallet-provider": "^1.0.34",
     "dotenv": "^8.2.0",
-    "truffle-flattener": "^1.4.3",
     "truffle-plugin-verify": "^0.3.10"
   }
 }
