@@ -7,10 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "compile":"truffle compile",
-    "deploy@local":"truffle migrate --reset",
-    "deploy@ropsten":"truffle migrate --network ropsten",
-    "deploy@mainnet":"truffle migrate --network mainnet",
+    "compile": "truffle compile",
+    "deploy@local": "truffle migrate --reset",
+    "deploy@ropsten": "truffle migrate --network ropsten",
+    "deploy@mainnet": "truffle migrate --network mainnet",
     "flattener": "./node_modules/.bin/truffle-flattener ./contracts/StandardToken.sol > ./build/StandardTokenFlattened.sol"
   },
   "author": "",
@@ -19,6 +19,7 @@
     "@openzeppelin/contracts": "^2.5.0",
     "@truffle/hdwallet-provider": "^1.0.34",
     "dotenv": "^8.2.0",
-    "truffle-flattener": "^1.4.3"
+    "truffle-flattener": "^1.4.3",
+    "truffle-plugin-verify": "^0.3.10"
   }
 }
